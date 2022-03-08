@@ -1,0 +1,56 @@
+.checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.checkbox-row:last-child {
+    margin-bottom: 0;
+}
+
+.real-checkbox {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    appearance: none;
+}
+
+.castom-checkbox {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 14px;
+    vertical-align: bottom;
+    background: #EEEEEE;
+    border: 1px solid #C0C0C0;
+    border-radius: 2px;
+}
+
+.real-checkbox:focus + .castom-checkbox {
+    border: 2px solid #0AC883;
+    box-shadow: 0 0 10px 0 rgba(51, 148, 122, 0.5);
+}
+
+.castom-checkbox::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 17px;
+    height: 17px;
+    background-image: url('../img/icons/check.svg');
+    background-repeat: no-repeat;
+    
+    transition: 0.2s ease-in;
+}
+
+.real-checkbox:checked + .castom-checkbox::before {
+    transform: translate(-50%, -50%) scale(1);
+}

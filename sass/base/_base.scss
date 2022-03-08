@@ -1,0 +1,67 @@
+
+/* Base */
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+html, body, iframe, fieldset,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, legend,
+dl, dt, dd, ol, ul, li {
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+html {
+    height: 100%; /*sticky footer */
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%; /*sticky footer */
+    display: flex; /*sticky footer */
+    flex-direction: column; /*sticky footer */
+    font-family: 'PT Sans', sans-serif;
+    color: #31405B;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body > * {
+    flex-shrink: 0; /*sticky footer */
+}
+
+.bgcolor {
+    background-color: #F2F8F6;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+
+.main-header {
+    font-weight: 700;
+    font-size: 54px;
+    color: #31405B;
+}
+
+.inner-page {
+    padding: 60px 0;
+}
+
+.none {
+    display: none !important;
+}
